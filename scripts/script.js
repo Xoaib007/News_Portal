@@ -17,14 +17,15 @@ const displayeCategories = categories =>{
         categoryContainer.appendChild(categoryDiv);
     });
 };
-const displayNews = (category_id) => {
-    const url = (`https://openapi.programming-hero.com/api/news/category/${category_id}`);
+const displayNews = (catId) => {
+    console.log('id-' , catId)
+    const url = `https://openapi.programming-hero.com/api/news/category/0${catId}`;
+    console.log(url)
 
-    fetch= (url)
+    fetch (url)
     .then( res => res.json())
     .then( data => console.log(data))
 
 }
 
 loadCategories();
-displayNews();

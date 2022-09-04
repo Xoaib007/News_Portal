@@ -5,7 +5,7 @@
     font-size: 20px;
     text-decoration: none;
 };
-.category1{
+.category{
     text-decoration: none;
     font-size: 18px;
     font: rgba(133, 133, 133, 1);
@@ -14,7 +14,4 @@
     border: none;
     background-color: white;
 };
-.author-image{
-    width: 10px;
-    height: 10px;
-}
+

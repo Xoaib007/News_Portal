@@ -44,7 +44,7 @@ const displayNews = allNews =>{
                             <p class="card-text">${news.details}</p>
                             <section>
                                 <div class="d-flex">
-                                    <img src="${news.author.img}" class="author-image" alt="">
+                                    
                                     <div >
                                         <p>${news.author.name}</p>
                                         <p>${news.author.published_date}</p>
@@ -67,3 +67,4 @@ const displayNews = allNews =>{
 loadCategories();
 
 loadNews();
+{/* <img src="${news.author.img}" class="author-image" alt=""></img> */}

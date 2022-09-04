@@ -13,6 +13,7 @@ const displayeCategories = categories =>{
         <button onclick="loadNews(${categoryName.category_id})" class="category">${categoryName.category_name}</button>
         `;
         categoryContainer.appendChild(categoryDiv);
+       
     });
 };
 
@@ -29,8 +30,11 @@ const loadNews = (catId) => {
 const displayNews = allNews =>{
     console.log(allNews)
     const newsContainer = document.getElementById('all-news');
+    newsContainer.innerText= '';
     allNews.forEach( news => {
+        toggleSpinner(true);
         const newsDiv = document.createElement('div');
+        toggleSpinner(false);
         newsDiv.classList.add('newses');
         newsDiv.innerHTML = `
             <div class="card mb-3" style="max-width: 540px;">
@@ -62,6 +66,17 @@ const displayNews = allNews =>{
         `
         newsContainer.appendChild(newsDiv);
     })
+}
+
+const toggleSpinner = isLoading => {
+
+    const loaderSection = document.getElementById('spinner');
+    if(isLoading){
+        loaderSection.classList.remove('d-none')
+    }
+    else{
+        loaderSection.classList.add('d-none');
+    }
 }
 
 loadCategories();

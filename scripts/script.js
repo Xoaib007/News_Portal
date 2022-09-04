@@ -89,9 +89,9 @@ const toggleSpinner = isLoading => {
 }
 
 
-const loadNewsId = (catId1) => {
+const loadNewsId = () => {
     console.log('id-' , catId1)
-    const url = `https://openapi.programming-hero.com/api/news/category/0${catId1}`;
+    const url = `https://openapi.programming-hero.com/api/news/category/0${n++}`;
     console.log(url)
 
     fetch (url)

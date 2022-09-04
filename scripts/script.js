@@ -94,10 +94,32 @@ const loadCategories = () => {
     } else {
       loaderSection.classList.add("d-none");
     }
+<<<<<<< HEAD
   };
   
   const loadNewsDetails = async (id) => {
     const url = `https://openapi.programming-hero.com/api/news/${id}`;
+=======
+    else{
+        loaderSection.classList.add('d-none');
+    }
+}
+
+
+const loadNewsId = () => {
+    console.log('id-' , catId1)
+    const url = `https://openapi.programming-hero.com/api/news/category/0${n++}`;
+    console.log(url)
+
+    fetch (url)
+    .then( res => res.json())
+    .then( data => loadNewsDetails(data.data._id))
+};
+
+const loadNewsDetails = async id =>{
+    const url =`https://openapi.programming-hero.com/api/news/${id}`;
+    console.log(url);
+>>>>>>> a55b56ecfd42e26d6bcf01cd09be3e8da46afb40
     const res = await fetch(url);
     const data = await res.json();
     displayNewsDetails(data.data);

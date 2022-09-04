@@ -1,141 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CNN News</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.html">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.html" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <!----------------------
       Navigation Bar Start
   ----------------------->
 
-  <nav id="nav-bar" class="navbar navbar-expand-lg bg-white mx-5 border-bottom-dark mt-3">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">CNN News</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav
+      id="nav-bar"
+      class="navbar navbar-expand-lg bg-white mx-5 border-bottom-dark mt-3"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">CNN News</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav d-flex position-absolute top-0 end-0 me-5 pe-5">
-          <a class="nav-link active me-3" aria-current="page" href="index.html">News</a>
-          <a class="nav-link active text-bg-primary" aria-current="page" href="#">Blog</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div
+            class="navbar-nav d-flex position-absolute top-0 end-0 me-5 pe-5"
+          >
+            <a
+              class="nav-link active me-3"
+              aria-current="page"
+              href="index.html"
+              >News</a
+            >
+            <a
+              class="nav-link active text-bg-primary"
+              aria-current="page"
+              href="#"
+              >Blog</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
-  
-  <!----------
+    </nav>
+
+    <!----------
     Navbar end
   ----------->
 
-
-  <!-------------
+    <!-------------
   Accordian Start
   -------------->
-    
-  <div class="accordion accordion-flush mt-5 pt-5" id="accordionFlushExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingOne">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          1. Whats the difference between var , let and const ?
-        </button>
-      </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          1.const is preferred to let, which is preferred to var. Avoid using var. <br>
-          2.let is preferred to const when it's known that the value it points to will change over time.<br>
-          3.const is great for global, constant values.<br>
-          4.Libraries are typically imported as const.<br> <br>
 
-          When importing a library and instatiating it - you don't want to be able to reassign the instance to something else, since you'd enter a slippery slope of "using the library", whereas, something else is "slipping code in" under the hood.<br><br>
-          
-          For instance, if you were to require() a library such as Axios, you're concievably wanting to use its API. However, there's nothing preventing you (or someone else) to switch out the axios instance with something else if you haven't used const to declare it:</div>
+    <div class="accordion accordion-flush mt-5 pt-5" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            1. Whats the difference between var , let and const ?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            1.const is preferred to let, which is preferred to var. Avoid using
+            var. <br />
+            2.let is preferred to const when it's known that the value it points
+            to will change over time.<br />
+            3.const is great for global, constant values.<br />
+            4.Libraries are typically imported as const.<br />
+            <br />
+
+            When importing a library and instatiating it - you don't want to be
+            able to reassign the instance to something else, since you'd enter a
+            slippery slope of "using the library", whereas, something else is
+            "slipping code in" under the hood.<br /><br />
+
+            For instance, if you were to require() a library such as Axios,
+            you're concievably wanting to use its API. However, there's nothing
+            preventing you (or someone else) to switch out the axios instance
+            with something else if you haven't used const to declare it:
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-          2. Whats the difference between regular function and arrow function ?
-        </button>
-      </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">You can call both function declaration and expression as Normal/Regular        Function <br>
-          Arrow function is introduced in ES6 and also known as fat arrow function.</div>
-          1. Syntax <br>
-          2. Arguments binding<br>
-          3. this<br>
-          4. new keyword<br>
-          5. No duplicate named parameters<br>
-          6. Function Hoisting<br>
-          7. Methods<br>
-         </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          3. Whats the difference between map, forEach, filter and find?
-        </button>
-      </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          .forEach: <br><br>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+            aria-expanded="false"
+            aria-controls="flush-collapseTwo"
+          >
+            2. Whats the difference between regular function and arrow function
+            ?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseTwo"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingTwo"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            You can call both function declaration and expression as
+            Normal/Regular Function <br />
+            Arrow function is introduced in ES6 and also known as fat arrow
+            function.
+          </div>
+          1. Syntax <br />
+          2. Arguments binding<br />
+          3. this<br />
+          4. new keyword<br />
+          5. No duplicate named parameters<br />
+          6. Function Hoisting<br />
+          7. Methods<br />
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree"
+            aria-expanded="false"
+            aria-controls="flush-collapseThree"
+          >
+            3. Whats the difference between map, forEach, filter and find?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseThree"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingThree"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            .forEach: <br /><br />
 
-          .forEach(), is used to execute the same code on every element in an array but does not change the array and it returns undefined. <br><br>
+            .forEach(), is used to execute the same code on every element in an
+            array but does not change the array and it returns undefined.
+            <br /><br />
 
-          .map(): <br><br>
-          .map() executes the same code on every element in an array and returns a new array with the updated elements. <br><br>
+            .map(): <br /><br />
+            .map() executes the same code on every element in an array and
+            returns a new array with the updated elements. <br /><br />
 
-          .filter(): <br><br>
-          .filter() checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria. <br><br>
+            .filter(): <br /><br />
+            .filter() checks every element in an array to see if it meets a
+            certain criteria and returns a new array with the elements that
+            return truthy for the criteria. <br /><br />
 
-          .find(): <br><br>
-          When you want to select a single element from an array.
+            .find(): <br /><br />
+            When you want to select a single element from an array.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseFour"
+            aria-expanded="false"
+            aria-controls="flush-collapseFour"
+          >
+            4. When and why to use template string ?
+          </button>
+        </h2>
+        <div
+          id="flush-collapseFour"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingFour"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            Template literals are enclosed by backtick (`) characters instead of
+            double or single quotes. <br /><br />
+
+            Along with having normal strings, template literals can also contain
+            other parts called placeholders, which are embedded expressions
+            delimited by a dollar sign and curly braces: ${expression}. The
+            strings and placeholders get passed to a function — either a default
+            function, or a function you supply. The default function (when you
+            don't supply your own) just performs string interpolation to do
+            substitution of the placeholders and then concatenate the parts into
+            a single string. <br /><br />
+
+            To supply a function of your own, precede the template literal with
+            a function name; the result is called a tagged template. In that
+            case, the template literal is passed to your tag function, where you
+            can then perform whatever operations you want on the different parts
+            of the template literal. <br /><br />
+
+            To escape a backtick in a template literal, put a backslash (\)
+            before the backtick.
+          </div>
         </div>
       </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingFour">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-          4. When and why to use template string ?
-        </button>
-      </h2>
-      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Template literals are enclosed by backtick (`) characters instead of double or single quotes. <br><br>
 
-          Along with having normal strings, template literals can also contain other parts called placeholders, which are embedded expressions delimited by a dollar sign and curly braces: ${expression}. The strings and placeholders get passed to a function — either a default function, or a function you supply. The default function (when you don't supply your own) just performs string interpolation to do substitution of the placeholders and then concatenate the parts into a single string. <br><br>
-          
-          To supply a function of your own, precede the template literal with a function name; the result is called a tagged template. In that case, the template literal is passed to your tag function, where you can then perform whatever operations you want on the different parts of the template literal. <br><br>
-          
-          To escape a backtick in a template literal, put a backslash (\) before the backtick.</div>
-      </div>
-    </div>
-  </div>
-    
-  <!-------------
+    <!-------------
     Accordian End
   -------------->
-  
-  <footer>
-    <div class="position-absolute top-400 start-50 translate-middle">
+
+    <footer>
       <p id="footer" class="text-center"><i>@ 2022 All Rights Reserved</i></p>
-    </div>
-  </footer>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body>
-</html>v
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
